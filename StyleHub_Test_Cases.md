@@ -14,9 +14,13 @@ User is on Registration page
 
 ### Steps
 
-1.  Enter valid name2. Enter valid email3. Enter valid password4. Select
-    role "user"5. Submit form6. Verify record in database using SQL
-    queryTest Data: a@mail.com
+1.  Enter valid name
+2. Enter valid email
+3.  Enter valid password
+4.   Select  role "user"
+5. Submit form
+Verify record in database using SQL
+queryTest Data: a@mail.com
 
 ### Expected Result
 
@@ -37,7 +41,8 @@ User completed registration
 
 ### Steps
 
-1.  Enter any verification code2. Submit
+1.  Enter any verification code
+2.  Submit
 
 ### Expected Result
 
@@ -57,7 +62,8 @@ Registration page opened
 
 ### Steps
 
-1.  Leave fields empty2. Click Submit
+1.  Leave fields empty
+2.   Click Submit
 
 ### Expected Result
 
@@ -77,8 +83,9 @@ Registration page opened
 
 ### Steps
 
-1.  Enter invalid email (example@)2. Fill other fields correctly3.
-    Submit
+1.  Enter invalid email (example@)
+2.   Fill other fields correctly
+3.   Submit
 
 ### Expected Result
 
@@ -98,7 +105,8 @@ User with email already exists in DB
 
 ### Steps
 
-1.  Enter existing email2. Fill other fields3. Submit
+1.  Enter existing email
+2.   Fill other fields3. Submit
 
 ### Expected Result
 
@@ -118,7 +126,9 @@ User is registered
 
 ### Steps
 
-1.  Enter correct email2. Enter correct password3. Click Login
+1.  Enter correct email
+2.   Enter correct password
+    3.  Click Login
 
 ### Expected Result
 
@@ -138,7 +148,9 @@ User exists
 
 ### Steps
 
-1.  Enter correct email2. Enter wrong password3. Click Login
+1.  Enter correct email
+2.   Enter wrong password
+    3.  Click Login
 
 ### Expected Result
 
@@ -158,7 +170,9 @@ Login page opened
 
 ### Steps
 
-1.  Enter unregistered email2. Enter password3. Click Login
+1.  Enter unregistered email
+2.   Enter password
+    3.  Click Login
 
 ### Expected Result
 
@@ -178,8 +192,9 @@ Login page opened
 
 ### Steps
 
-1.  Enter ' OR 1=1 -- in email field2. Enter random password3. Click
-    Login
+1.  Enter ' OR 1=1 -- in email field
+2.   Enter random password
+    3.  Click  login
 
 ### Expected Result
 
@@ -219,8 +234,9 @@ User logged inAt least 1 product in favourites
 
 ### Steps
 
-1.  Open Favourites section2. Remove one product from favourites3.
-    Refresh page
+1.  Open Favourites section
+2.  Remove one product from favourites
+ 3.   Refresh page
 
 ### Expected Result
 
@@ -241,7 +257,8 @@ account exists in database2. User is logged in
 
 ### Steps
 
-1.  Login with valid credentials2. Click on "Profile" link in header
+1.  Login with valid credentials
+2. Click on "Profile" link in header
 
 ### Expected Result
 
@@ -261,7 +278,8 @@ User is logged out
 
 ### Steps
 
-1.  Manually enter /profile URL in browser2. Press Enter
+1.  Manually enter /profile URL in browser
+2.  Press Enter
 
 ### Expected Result
 
@@ -281,7 +299,10 @@ User logged inNew Name: Noname
 
 ### Steps
 
-1.  Open Profile page2. Change Name field3. Click Save4. Refresh page
+1.  Open Profile page
+2.Change Name field
+    3.Click Save
+       4.Refresh page
 
 ### Expected Result
 
@@ -302,7 +323,8 @@ Profile page opened
 
 ### Steps
 
-1.  Clear Name field2. Click Save
+1.  Clear Name field
+2. Click Save
 
 ### Expected Result
 
@@ -322,8 +344,12 @@ User logged incurrent password: 12345new: 123456
 
 ### Steps
 
-1.  Enter correct current password2. Enter new password3. Confirm new
-    password4. Click Save5. Logout6. Login with new password
+1.  Enter correct current password
+2. Enter new password
+3.Confirm new password
+4. Click Save
+5. Logout
+6. Login with new password
 
 ### Expected Result
 
@@ -344,7 +370,9 @@ User logged in
 
 ### Steps
 
-1.  Enter incorrect current password2. Enter new password3. Click Save
+1.  Enter incorrect current password
+2. Enter new password
+3. Click Save
 
 ### Expected Result
 
@@ -360,13 +388,17 @@ System displays error messagePassword is not changed
 
 ### Preconditions
 
-1.  User account exists2. User logged in3. At least 1 product added to
-    favourites
+1.  User account exists
+2. User logged in
+3. At least 1 product added tofavourites
 
 ### Steps
 
-1.  Open home page2. Click to product3. Add to favorite4. Click to User
-    page5. Open "Favourites" section
+1.  Open home page
+2. Click to product
+3. Add to favorite
+4. Click to User page
+5. Open "Favourites" section
 
 ### Expected Result
 
@@ -386,7 +418,8 @@ User logged inUser has no favourite products
 
 ### Steps
 
-1.  Navigate to Profile page2. Open "Favourites" section
+1.  Navigate to Profile page
+2.  Open "Favourites" section
 
 ### Expected Result
 
@@ -407,7 +440,9 @@ User logged inAt least one completed order exists in database
 
 ### Steps
 
-1.  Login2. Navigate to Profile page3. Open "Orders" section
+1.  Login
+2. Navigate to Profile page
+3.  Open "Orders" section
 
 ### Expected Result
 
@@ -428,7 +463,8 @@ User logged inNo orders in database
 
 ### Steps
 
-1.  Navigate to Profile page2. Open Orders section
+1.  Navigate to Profile page
+2.  Open Orders section
 
 ### Expected Result
 
@@ -444,12 +480,17 @@ Message displayed: "No orders yet"
 
 ### Preconditions
 
-1.  User account exists2. User is logged in3. Profile page is accessible
+1.  User account exists
+2. User is logged in
+3. Profile page is accessible
 
 ### Steps
 
-Steps to Reproduce1.Login to the application2. Navigate to Profile
-page3. Enter new valid Name value4. Click "Save"5. Refresh the page
+Steps to Reproduce1.Login to the application
+2. Navigate to Profile page
+3. Enter new valid Name value
+4. Click "Save"
+5. Refresh the page
 
 ### Expected Result
 
@@ -473,15 +514,19 @@ User is on the store page.There is a product marked as "Out of Stock."
 
 ### Steps
 
-Steps to Reproduce:1. Go to Product page2. Locate a product labeled "Out
-of Stock"3. Click the "Add to Cart" button
+Steps to Reproduce:
+1. Go to Product page
+2. Locate a product labeled "Out
+of Stock"
+3. Click the "Add to Cart" button
 
 ### Expected Result
 
 Expected Result:-The "Add to Cart" button should be disabled or the user
-should not be able to add the product to the cart.-If applicable, a
-message like "Product is out of stock" should appear.Actual Result:-The
-user is able to add the out-of-stock product to the cart.-The cart
+should not be able to add the product to the cart.
+-If applicable, a message like "Product is out of stock" should appear.
+Actual Result:
+-The user is able to add the out-of-stock product to the cart.-The cart
 updates with the product even though it is not available.
 
 ------------------------------------------------------------------------
@@ -505,25 +550,15 @@ again for the same product
 
 ### Expected Result
 
-Expected Result:-The product should appear only once in the Favorites
-list.-Duplicate entries should be prevented.Actual Result:-The same
-product is added multiple times to the Favorites list.
+Expected Result:
+-The product should appear only once in the Favorites
+list.
+-Duplicate entries should be prevented.
+Actual Result:
+-The same product is added multiple times to the Favorites list.
 
 ------------------------------------------------------------------------
 
-## C76 - \[BUG\] C75 carousel click action is not redirected to the correct page or link associated with the carousel image
-
-**Type:** Other
-
-**Priority:** Medium
-
-### Preconditions
-
-### Steps
-
-### Expected Result
-
-------------------------------------------------------------------------
 
 ## C93 - \[BUG\] C71 All Errors Return 500 Status Code
 
@@ -535,14 +570,18 @@ product is added multiple times to the Favorites list.
 
 ### Steps
 
-Steps to Reproduce:1. Send a request with missing fields --- returns 500
-instead of 4002. Request a non-existent resource --- returns 500 instead
-of 4043. Access protected endpoint without auth --- returns 500 instead
+Steps to Reproduce:
+1. Send a request with missing fields --- returns 500
+instead of 4002.
+Request a non-existent resource --- returns 500 instead
+of 4043.
+Access protected endpoint without auth --- returns 500 instead
 of 401
 
 ### Expected Result
 
-Expected: Appropriate HTTP status codes for each error typeActual:
+Expected: Appropriate HTTP status codes for each error type
+Actual:
 Everything returns 500
 
 ------------------------------------------------------------------------
@@ -560,18 +599,23 @@ be empty or contain other products.
 
 ### Steps
 
-1.  Click "Add to Cart" on a specific product (e.g., "Blue T-Shirt").2.
-    Open the cart and note the quantity of the product.3. Click "Add to
-    Cart" again for the same product.4. Repeat multiple times if needed.
+1.  Click "Add to Cart" on a specific product (e.g., "Blue T-Shirt").
+2. Open the cart and note the quantity of the product.
+3. Click "Add to Cart" again for the same product.
+4. Repeat multiple times if needed.
 
 ### Expected Result
 
-Expected Result: -Only one cart entry exists per product. -Quantity
-increments with each addition.-Cart total updates correctly based on
-quantity × price. Actual Result: -A new cart row is created each time
-the same product is added. -Quantity does not increment; -multiple
-duplicate entries appear in the cart. -Cart total may be incorrect or
-misleading.
+Expected Result:
+-Only one cart entry exists per product.
+-Quantity increments with each addition.
+-Cart total updates correctly based on quantity × price. 
+Actual Result:
+-A new cart row is created each time
+the same product is added. 
+-Quantity does not increment; 
+-multiple duplicate entries appear in the cart. 
+-Cart total may be incorrect or misleading.
 
 ------------------------------------------------------------------------
 
@@ -587,15 +631,20 @@ User is on the cart page.Cart is empty.
 
 ### Steps
 
-1.  Open the cart page.2. Verify that the cart has no products.3. Click
-    the "Proceed to Payment" or "Checkout" button.
+1.  Open the cart page.
+2.  Verify that the cart has no products.
+3. Click the "Proceed to Payment" or "Checkout" button.
 
 ### Expected Result
 
-Expected Result: -The button should be disabled.-User should not reach
-the payment page. -Appropriate message should inform the user that the
-cart is empty. Actual Result: -User is able to click "Proceed to
-Payment".-Payment page opens even though the cart has no items.
+Expected Result: 
+-The button should be disabled.
+-User should not reach the payment page. 
+-Appropriate message should inform the user that the
+cart is empty.
+Actual Result:
+-User is able to click "Proceed to Payment".
+-Payment page opens even though the cart has no items.
 
 ------------------------------------------------------------------------
 
@@ -612,16 +661,20 @@ grid.
 
 ### Steps
 
-1.  Locate a product on the product grid or product detail page.2. Click
-    the "Add to Favourites" button (heart icon or similar).
+1.  Locate a product on the product grid or product detail page.
+2.   Click the "Add to Favourites" button (heart icon or similar).
 
 ### Expected Result
 
-Expected Result:- User receives visual feedback, e.g.,: -Heart icon
-changes color or fills in.- A tooltip or message appears: "Added to
-Favourites".- Feedback confirms the action was successful. Actual
-Result: -No visual feedback is shown. -User cannot tell if the product
-was added to favourites.
+Expected Result:
+- User receives visual feedback, e.g.,:
+- Heart icon changes color or fills in.
+- A tooltip or message appears: "Added to Favourites".
+- Feedback confirms the action was successful.
+
+Actual Result: 
+-No visual feedback is shown.
+-User cannot tell if the product was added to favourites.
 
 ------------------------------------------------------------------------
 
