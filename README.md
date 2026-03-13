@@ -218,8 +218,6 @@ StyleHub-QA-Testing
 ├── Bug-Reports
 │
 ├── API-Testing
-│
-├── Database-Testing
 
 
 ---
