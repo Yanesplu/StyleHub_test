@@ -1,444 +1,384 @@
-Bug Reports
-C51 – Profile Name Is Not Updated Despite Successful API Response
+# Bug Reports
 
-Priority: Medium
+Collection of defects discovered during manual testing of the **StyleHub e-commerce application**.
 
-Preconditions
+---
 
-User account exists
+## C51 — Profile Name Is Not Updated Despite Successful API Response
 
-User is logged in
+| Field | Value |
+|------|------|
+| Priority | Medium |
+| Component | Profile |
+| Type | Functional |
+
+### Preconditions
+- User account exists
+- User is logged in
+- Profile page is accessible
 
-Profile page is accessible
+### Steps to Reproduce
+1. Login to the application
+2. Navigate to **Profile page**
+3. Enter a new valid **Name**
+4. Click **Save**
+5. Refresh the page
 
-Steps to Reproduce
+### Expected Result
+- Name should be updated in the database
+- Updated value should persist after refresh
+- API response should reflect updated data
 
-Login to the application
+### Actual Result
+- API request returns **200 OK**
+- Response body contains `{ success: true }`
+- Name remains unchanged after refresh
+- Database value is not updated
 
-Navigate to Profile page
+---
 
-Enter a new valid Name value
+## C64 — User Can Add Out-of-Stock Product to Cart
 
-Click Save
+| Field | Value |
+|------|------|
+| Priority | High |
+| Component | Cart |
+| Type | Functional |
 
-Refresh the page
+### Preconditions
+- User is on the store page
+- Product is marked **Out of Stock**
 
-Expected Result
+### Steps to Reproduce
+1. Open **Product page**
+2. Locate a product labeled **Out of Stock**
+3. Click **Add to Cart**
 
-Name should be updated in the database
+### Expected Result
+- Button should be **disabled**
+- Product should not be added to cart
+- Optional message: *Product is out of stock*
 
-Updated value should persist after page refresh
+### Actual Result
+- Product is added to the cart
+- Cart updates despite unavailable stock
 
-API response should reflect the actual updated data
+---
 
-Actual Result
+## C67 — Duplicate Product Added to Favourites
 
-API request is sent successfully
+| Field | Value |
+|------|------|
+| Priority | Medium |
+| Component | Favourites |
+| Type | Functional |
 
-Server responds with 200 { success: true, user: {...} }
+### Preconditions
+- User is logged in
+- User is on product page
 
-Name remains unchanged after page refresh
+### Steps to Reproduce
+1. Open **Product page**
+2. Click **Add to Favourites**
+3. Click **Add to Favourites** again
 
-Database does not reflect the updated value
+### Expected Result
+- Product should appear **only once** in favourites
 
-C64 – User Can Add Out-of-Stock Product to Cart
+### Actual Result
+- Same product appears **multiple times**
 
-Priority: High
+---
 
-Preconditions
+## C93 — All Errors Return 500 Status Code
 
-User is on the store page
+| Field | Value |
+|------|------|
+| Priority | Medium |
+| Component | API |
+| Type | API |
 
-There is a product marked as Out of Stock
+### Steps to Reproduce
+1. Send request with **missing fields**
+2. Request **non-existent resource**
+3. Access **protected endpoint without authorization**
 
-Steps to Reproduce
+### Expected Result
+Proper HTTP status codes should be returned:
 
-Go to Product page
+| Scenario | Expected Code |
+|--------|--------|
+| Invalid request | 400 |
+| Unauthorized access | 401 |
+| Resource not found | 404 |
 
-Locate a product labeled Out of Stock
+### Actual Result
+All requests return:
 
-Click Add to Cart
+```
+500 Internal Server Error
+```
 
-Expected Result
+---
 
-Add to Cart button should be disabled
+## C95 — Duplicate Cart Items Instead of Quantity Increment
 
-User should not be able to add the product to the cart
+| Field | Value |
+|------|------|
+| Priority | Medium |
+| Component | Cart |
+| Type | Functional |
 
-Optional message: "Product is out of stock"
+### Preconditions
+- Product is in stock
+- User is on product page
 
-Actual Result
+### Steps to Reproduce
+1. Click **Add to Cart**
+2. Open cart
+3. Click **Add to Cart** again
 
-User can add an out-of-stock product to the cart
+### Expected Result
+- Only **one cart entry per product**
+- Quantity should **increase**
+- Cart total updates correctly
 
-Cart updates even though the product is unavailable
+### Actual Result
+- Multiple duplicate rows appear
+- Quantity does not increment
 
-C67 – Duplicate Product Is Added Multiple Times to Favourites
+---
 
-Priority: Medium
+## C97 — Empty Cart Can Proceed to Payment
 
-Preconditions
+| Field | Value |
+|------|------|
+| Priority | Medium |
+| Component | Checkout |
+| Type | Functional |
 
-User is logged in
+### Preconditions
+- Cart is empty
 
-User is on the product page or product listing
+### Steps to Reproduce
+1. Open cart page
+2. Click **Proceed to Payment**
 
-Steps to Reproduce
+### Expected Result
+- Checkout button should be **disabled**
+- User should not reach payment page
 
-Go to Product page
+### Actual Result
+- User can proceed to payment with empty cart
 
-Click Add to Favourites
+---
 
-Click Add to Favourites again for the same product
+## C98 — No Visual Feedback When Adding to Favourites
 
-Expected Result
+| Field | Value |
+|------|------|
+| Priority | Medium |
+| Component | UI |
+| Type | UI |
 
-Product should appear only once in the favourites list
+### Preconditions
+- User is logged in
+- Product page is open
 
-Duplicate entries should be prevented
+### Steps to Reproduce
+1. Click **Add to Favourites**
 
-Actual Result
+### Expected Result
+User should see confirmation:
 
-The same product appears multiple times in favourites
+- Heart icon changes color
+- Tooltip appears
+- Notification displayed
 
-C93 – All Errors Return 500 Status Code
+### Actual Result
+- No visual confirmation is shown
 
-Priority: Medium
+---
 
-Steps to Reproduce
+## C99 — Password Change Without Matching Validation
 
-Send request with missing fields → returns 500 instead of 400
+| Field | Value |
+|------|------|
+| Priority | Medium |
+| Component | Profile |
+| Type | Validation |
 
-Request a non-existent resource → returns 500 instead of 404
+### Steps to Reproduce
+1. Open **Profile page**
+2. Enter different values in:
+   - New Password
+   - Confirm Password
+3. Submit form
 
-Access protected endpoint without authorization → returns 500 instead of 401
+### Expected Result
+- Passwords must match before submission
 
-Expected Result
+### Actual Result
+- Form submits mismatched passwords
 
-Each error should return the appropriate HTTP status code:
+---
 
-400 – Bad Request
+## C100 — Price Sorting High to Low Does Not Work
 
-401 – Unauthorized
+| Field | Value |
+|------|------|
+| Priority | Medium |
+| Component | Search |
+| Type | Functional |
 
-404 – Not Found
+### Steps to Reproduce
+1. Sort products **Low → High**
+2. Sort products **High → Low**
 
-Actual Result
+### Expected Result
+Products should display **highest price first**
 
-All error scenarios return 500 Internal Server Error
+### Actual Result
+Sorting order remains identical to **Low → High**
 
-C95 – Duplicate Cart Items Instead of Quantity Increment
+---
 
-Priority: Medium
+## C105 — No Card Number Validation on Payment
 
-Preconditions
+| Field | Value |
+|------|------|
+| Priority | Medium |
+| Component | Payment |
+| Type | Validation |
 
-Product is in stock
+### Preconditions
+- Product added to cart
+- User on payment page
 
-User is on the product page
+### Steps to Reproduce
+1. Enter letters in card number
+2. Enter invalid length
+3. Submit payment
 
-Steps to Reproduce
+### Expected Result
+- Only numeric input allowed
+- Card number length validation
+- Payment should fail
 
-Click Add to Cart for a product
+### Actual Result
+Payment succeeds with invalid card number
 
-Open the cart and note the quantity
+---
 
-Click Add to Cart again for the same product
+## C116 — Payment Processed with Invalid Price
 
-Expected Result
+| Field | Value |
+|------|------|
+| Priority | Medium |
+| Component | Payment |
+| Type | Security |
 
-Only one cart entry per product
+### Steps to Reproduce
+1. Manipulate price value (DevTools)
+2. Enter:
+   - negative price
+   - text value
+   - extremely large number
+3. Click **Pay Now**
 
-Quantity should increase with each addition
+### Expected Result
+Payment should be blocked with validation error.
 
-Cart total should update accordingly
+### Actual Result
+Payment succeeds and order is created.
 
-Actual Result
+---
 
-A new cart row is created each time
+## C121 — Admin Cannot Edit Existing Product
 
-Quantity does not increment
+| Field | Value |
+|------|------|
+| Priority | Medium |
+| Component | Admin |
+| Type | Functional |
 
-Duplicate cart entries appear
+### Preconditions
+- Admin logged in
+- Products exist
 
-C97 – Empty Cart Can Proceed to Payment
+### Steps to Reproduce
+1. Open **Admin Dashboard**
+2. Navigate to **Products**
+3. Click **Edit**
 
-Priority: Medium
+### Expected Result
+Product edit form should open.
 
-Preconditions
+### Actual Result
+Clicking **Edit** produces no action.
 
-User is on the Cart page
+---
 
-Cart is empty
+## C128 — Untranslated Button Text in Ukrainian
 
-Steps to Reproduce
+| Field | Value |
+|------|------|
+| Priority | Medium |
+| Component | Localization |
+| Type | UI |
 
-Open the cart page
+### Steps to Reproduce
+1. Switch language to **Ukrainian**
+2. Open product page
 
-Verify the cart contains no products
+### Expected Result
 
-Click Proceed to Payment
-
-Expected Result
-
-Button should be disabled
-
-User should not reach the payment page
-
-Message should inform that the cart is empty
-
-Actual Result
-
-User can proceed to Payment page with an empty cart
-
-C98 – No Visual Feedback for Add to Favourites
-
-Priority: Medium
-
-Preconditions
-
-User is logged in
-
-User is on product page or product grid
-
-Steps to Reproduce
-
-Locate a product
-
-Click Add to Favourites
-
-Expected Result
-
-User receives visual confirmation:
-
-Heart icon changes color
-
-Tooltip or message appears
-
-Action confirmation is visible
-
-Actual Result
-
-No visual feedback is shown
-
-User cannot confirm if the item was added
-
-C99 – Password Change Without Matching Validation
-
-Priority: Medium
-
-Steps to Reproduce
-
-Go to Profile page
-
-Enter different values in New Password and Confirm Password
-
-Submit the form
-
-Expected Result
-
-Form should validate that passwords match
-
-Submission should be blocked if they differ
-
-Actual Result
-
-Mismatched passwords are accepted
-
-Request is sent without validation
-
-C100 – Sort by Price High to Low Returns Same as Low to High
-
-Priority: Medium
-
-Preconditions
-
-Product list contains items with different prices
-
-Steps to Reproduce
-
-Sort products Price: Low → High
-
-Note the order
-
-Sort products Price: High → Low
-
-Expected Result
-
-Products should be displayed from highest to lowest price
-
-Actual Result
-
-Order remains identical to Low → High sorting
-
-C105 – No Card Number Validation on Payment
-
-Priority: Medium
-
-Preconditions
-
-User has items in cart
-
-User is on payment page
-
-Steps to Reproduce
-
-Enter letters in card number field
-
-Enter incorrect length
-
-Submit payment
-
-Expected Result
-
-Only digits allowed
-
-Card number length validation
-
-Payment should fail with validation message
-
-Actual Result
-
-Any input is accepted
-
-Payment is processed successfully
-
-C116 – Payment Is Processed with Invalid Price Input
-
-Priority: Medium
-
-Preconditions
-
-User has items in cart
-
-User is on checkout page
-
-Steps to Reproduce
-
-Manipulate price value (via UI or DevTools)
-
-Examples:
-
-Negative value -50
-
-Text input "abc123"
-
-Extremely large number
-
-Click Pay Now
-
-Expected Result
-
-System should validate price value
-
-Invalid input should be rejected
-
-Payment should not be processed
-
-Actual Result
-
-Payment is processed successfully
-
-Order created with invalid price data
-
-C121 – Admin Unable to Edit Existing Product
-
-Priority: Medium
-
-Preconditions
-
-Admin user logged in
-
-At least one product exists
-
-Steps to Reproduce
-
-Login as Admin
-
-Open Admin Dashboard → Products
-
-Select existing product
-
-Click Edit
-
-Expected Result
-
-Product edit form should open
-
-Admin should be able to modify product details
-
-Actual Result
-
-Clicking Edit does nothing
-
-No modal or form appears
-
-C128 – Untranslated Button Text in Ukrainian
-
-Priority: Medium
-
-Preconditions
-
-Ukrainian language selected
-
-Steps to Reproduce
-
-Switch language to Ukrainian
-
-Open any product page
-
-Expected Result
-
-Button should display:
-
+```
 Додати до кошика
-Actual Result
+```
 
-Button shows placeholder:
+### Actual Result
 
+```
 [TRANSLATE_ME]
-C129 – Product Description in Wrong Language
+```
 
-Priority: Medium
+---
 
-Steps to Reproduce
+## C129 — Product Description in Wrong Language
 
-Select English language
+| Field | Value |
+|------|------|
+| Priority | Medium |
+| Component | Localization |
+| Type | UI |
 
-Locate product Windbreaker Sport Jacket
+### Steps to Reproduce
+1. Select **English language**
+2. Open product **Windbreaker Sport Jacket**
 
-Expected Result
+### Expected Result
+Description should be in **English**
 
-Description should be displayed in English
+### Actual Result
+Description is displayed in **Ukrainian**
 
-Actual Result
+---
 
-Description appears in Ukrainian
+## C130 — Product Title and Description Not Translated to Ukrainian
 
-C130 – Product Title and Description Not Translated to Ukrainian
+| Field | Value |
+|------|------|
+| Priority | Medium |
+| Component | Localization |
+| Type | UI |
 
-Priority: Medium
+### Steps to Reproduce
+1. Switch language to **Ukrainian**
+2. Open product page
 
-Preconditions
+### Expected Result
+Product title and description translated to Ukrainian.
 
-Website supports UA / ENG language switch
-
-Steps to Reproduce
-
-Switch language to Ukrainian
-
-Open product page
-
-Expected Result
-
-Product title translated into Ukrainian
-
-Product description translated into Ukrainian
-
-Actual Result
-
-Title remains in English
-
-Description remains in English
-
-Only interface elements are translated
+### Actual Result
+Product content remains in English.
