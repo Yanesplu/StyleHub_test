@@ -147,6 +147,7 @@ All API requests were executed using **Postman**.
 
 The exported collection can be found in:
 
-```
+https://drlys21-2901611.postman.co/workspace/%D0%94%D0%B0%D1%80%D1%8C%D1%8F-%D0%9B%D1%8B%D1%81%D0%B5%D0%BD%D0%BA%D0%BE's-Workspace~f0d88598-2d9e-4f17-8837-2efa5ca39195/collection/51860899-b2ec5b41-0221-43db-9d24-edde8c6fbb44?action=share&source=copy-link&creator=51860899
+
 API-Testing/postman-collection.json
 ```
