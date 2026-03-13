@@ -1,137 +1,231 @@
-# StyleHub_test
-Test Plan
-Project: Internet Clothes Shop (Next.js + PostgreSQL)
-1. Objective
-The objective of this test plan is to verify functionality, stability, and security of the Internet Clothes Shop web application built with Next.js and PostgreSQL (raw SQL queries).
-The testing covers UI, API, database validation, localization, and basic security checks.
+# StyleHub QA Testing Project
 
-2. Scope
-In Scope:
-Multi-language support (UA / ENG)
-User Registration & Login
-Profile management
-Product catalog
-Product details page
-Reviews functionality
-Search functionality
-Cart functionality
-Mock payment process
-Admin dashboard
-REST API endpoints
-Database validation (PostgreSQL)
-Console logging validation
+Manual testing project for an **e-commerce clothing website** built with **Next.js** and **PostgreSQL**.
 
-Out of Scope:
-Performance testing
-Load testing
-Real payment gateway integration
-Advanced security penetration testing
+This project demonstrates practical QA skills including **test case design, bug reporting, API testing, and database validation**.
 
-3. Tech Stack
-Frontend: Next.js
-Backend: Next.js API Routes
-Database: PostgreSQL
-Queries: Raw SQL
-Testing Tools:
-Browser DevTools
-Swagger / Postman
-TestRail
+---
 
-4. Test Types
-Functional Testing
-Regression Testing
-UI Testing
-API Testing
-Database Testing
-Localization Testing
-Basic Security Testing (SQL Injection)
-Console Logging Validation
+# Project Overview
 
-5. Test Environment
-OS: Windows 11
-Browser: Google Chrome
-Database: PostgreSQL (local)
-API tested via Swagger and Postman
+**Application type:** E-commerce clothing store  
+**Architecture:** Full-stack web application  
 
-6. Features to be Tested
-6.1 General
-Header and Footer layout
-Navigation
-Language switching
-Console logs validation
+**Tech stack:**
 
-6.2 Authentication
-Registration
-Email mock verification
-Login / Logout
-Session persistence
-Access control
+- Frontend: Next.js  
+- Backend: Next.js API Routes  
+- Database: PostgreSQL (raw SQL queries)
 
-6.3 Profile
-Update name
-Change password
-View favourites
-View order history
+The goal of this project was to perform **end-to-end manual testing of a web application**, including UI, API, database, and localization checks.
 
-6.4 Product Management
-View products
-Add to cart
-Add to favourites
-Add reviews
+---
 
-6.5 Search
-Search by product title
-Partial match
-No results scenario
+# Testing Scope
 
-6.6 Cart
-Add / remove products
-Quantity update
-Total calculation
+The following features were tested:
 
-6.7 Payment
-Mock payment process
-Order creation in DB
+- User registration and login
+- Profile management
+- Product catalog
+- Product details page
+- Reviews system
+- Search functionality
+- Shopping cart
+- Mock payment flow
+- Admin dashboard
+- Localization (UA / ENG)
 
-6.8 Admin Dashboard
-Create product
-Update product
-Manage users
-Change user role
-View orders
+Testing included **UI validation, API testing, database checks, and security validation.**
 
-6.9 API Testing
-Status code validation
-Response body validation
-Authorization checks
-Negative testing
+---
 
-6.10 Database Testing
-Data insertion validation
-Data update validation
-SQL injection checks
-Data integrity validation
+# Testing Types
 
-7. Risks
-Raw SQL queries may cause SQL injection vulnerabilities
-Localization may have missing translations
-Console logs may expose sensitive data
-Role-based access may have incorrect permissions
+The following testing approaches were used:
 
-8. Entry Criteria
-Application deployed locally
-Database connected
-All main features implemented
+- Functional Testing
+- UI Testing
+- Regression Testing
+- API Testing
+- Database Testing
+- Localization Testing
+- Negative Testing
+- Basic Security Testing (SQL Injection checks)
 
-9. Exit Criteria
-All critical test cases executed
-No critical or high severity defects open
-Core functionality works correctly
+---
 
-10. Deliverables
-Test Plan
-Test Cases
-Bug Reports
+# Testing Tools
 
-API Collection (Postman)
-Regression Test Results
+Tools used during testing:
+
+- Browser DevTools
+- Postman (API testing)
+- Swagger (API documentation)
+- PostgreSQL console
+- TestRail (test case management)
+
+---
+
+# Test Environment
+
+| Component | Details |
+|-----------|--------|
+| OS | Windows 11 |
+| Browser | Google Chrome |
+| Database | PostgreSQL |
+| Backend | Next.js API |
+| Testing Tools | Postman, DevTools |
+
+---
+
+# Features Tested
+
+## General
+- Header / Footer layout
+- Navigation
+- Language switch
+- Console log validation
+
+## Authentication
+- User registration
+- Login / Logout
+- Email verification (mock)
+- Session persistence
+- Access control
+
+## Profile
+- Update name
+- Change password
+- View favourites
+- View order history
+
+## Product Management
+- View products
+- Product details page
+- Add to cart
+- Add to favourites
+- Submit reviews
+
+## Search
+- Search by product title
+- Partial match search
+- Empty results scenario
+
+## Cart
+- Add products
+- Remove products
+- Update quantity
+- Total price calculation
+
+## Payment
+- Mock payment process
+- Order creation in database
+
+## Admin Dashboard
+- Create product
+- Update product
+- Manage users
+- Change user roles
+- View orders
+
+---
+
+# API Testing
+
+API testing included:
+
+- Status code validation
+- Response body validation
+- Authorization checks
+- Negative testing scenarios
+
+Example endpoints tested:
+
+```
+/api/login
+/api/register
+/api/products
+/api/cart
+```
+
+---
+
+# Database Testing
+
+Database validation included:
+
+- Data insertion validation
+- Data update validation
+- Data integrity verification
+- SQL injection testing
+
+Example SQL checks:
+
+```sql
+SELECT * FROM users;
+SELECT * FROM orders;
+SELECT * FROM products;
+```
+
+---
+
+# Test Documentation
+
+The project includes the following QA documentation:
+
+| Document | Description |
+|--------|-------------|
+| Test Plan | Overall testing strategy |
+| Test Cases | Detailed manual test cases |
+| Bug Reports | Documented defects |
+| API Collection | Postman API testing |
+| Regression Results | Test execution results |
+
+---
+
+# Test Results
+
+| Total Test Cases | 97 |
+| Passed | 68 |
+| Failed | 13 |
+| Bugs Found | 16 |
+
+---
+
+# Known Issues
+
+Examples of bugs found during testing:
+
+- Admin cannot edit product due to inactive button
+- Price field accepts invalid input
+- Some product descriptions are not localized
+- Missing validation on review form
+
+Detailed reports are available in the **Bug Reports** section.
+
+---
+
+# Project Structure
+
+```
+StyleHub-QA-Testing
+│
+├── Test-Plan
+│
+├── Test-Cases
+│
+├── Bug-Reports
+│
+├── API-Testing
+│
+├── Database-Testing
+
+
+---
+
+# Author
+
+Junior QA Engineer passionate about **manual testing, bug investigation, and improving product quality**.
+
+This project demonstrates practical testing skills and real QA workflow.
