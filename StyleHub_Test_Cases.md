@@ -171,9 +171,9 @@ Login page opened
 
 ### Steps
 
-1.  Enter unregistered email
-2.   Enter password
-    3.  Click Login
+1. Enter unregistered email
+2. Enter password
+3. Click Login
 
 ### Expected Result
 
@@ -195,7 +195,7 @@ Login page opened
 
 1.  Enter ' OR 1=1 -- in email field
 2.   Enter random password
-    3.  Click  login
+3.  Click  login
 
 ### Expected Result
 
@@ -237,7 +237,7 @@ User logged inAt least 1 product in favourites
 
 1.  Open Favourites section
 2.  Remove one product from favourites
- 3.   Refresh page
+3.  Refresh page
 
 ### Expected Result
 
@@ -253,8 +253,12 @@ Removed product is no longer displayed
 
 ### Preconditions
 
-Test Data:Email: testuser@example.comPassword: ValidPass1231. User
-account exists in database2. User is logged in
+Test Data:
+Email: 
+testuser@example.com
+Password: ValidPass1231. 
+User account exists in database
+User is logged in
 
 ### Steps
 
@@ -302,13 +306,14 @@ User logged inNew Name: Noname
 
 1.  Open Profile page
 2.Change Name field
-    3.Click Save
-       4.Refresh page
+3. Click Save
+4. Refresh page
 
 ### Expected Result
 
-1.  Success response is returned from API  2. Name is updated in UI3.
-    Database contains updated Name value
+1. Success response is returned from API
+2. Name is updated in UI
+3. Database contains updated Name value
 
 ------------------------------------------------------------------------
 
@@ -347,15 +352,15 @@ User logged incurrent password: 12345new: 123456
 
 1.  Enter correct current password
 2. Enter new password
-3.Confirm new password
+3. Confirm new password
 4. Click Save
 5. Logout
 6. Login with new password
 
 ### Expected Result
 
-Password update request returns success statusOld password no longer
-works
+Password update request returns success status
+Old password no longer works
 
 ------------------------------------------------------------------------
 
@@ -424,8 +429,8 @@ User logged inUser has no favourite products
 
 ### Expected Result
 
-System displays message like: "No favourite products yet"No errors
-appear in console
+System displays message like: "No favourite products yet"
+No errors appear in console
 
 ------------------------------------------------------------------------
 
@@ -441,14 +446,15 @@ User logged inAt least one completed order exists in database
 
 ### Steps
 
-1.  Login
+1. Login
 2. Navigate to Profile page
-3.  Open "Orders" section
+3. Open "Orders" section
 
 ### Expected Result
 
-List of previous orders is displayedEach order contains:-Order
-ID-Date-Total amount-List of purchased products
+List of previous orders is displayedEach order contains:
+-Order ID-Date-Total amount
+-List of purchased products
 
 ------------------------------------------------------------------------
 
@@ -490,7 +496,8 @@ Product exists in database
 ### Expected Result
 
 Product page opens successfullyCorrect product information is
-displayedNetwork request returns 200
+displayed
+Network request returns 200
 
 ------------------------------------------------------------------------
 
@@ -506,12 +513,13 @@ Product exists in DB
 
 ### Steps
 
-1.  Open Product page2. Compare displayed data with database values
+1.  Open Product page
+2.  Compare displayed data with database values
 
 ### Expected Result
 
-Title matches DBDescription matches DBPrice matches DBAvailable quantity
-matches DB
+Title matches DBDescription matches DB
+Price matches DBAvailable quantity matches DB
 
 ------------------------------------------------------------------------
 
@@ -527,12 +535,15 @@ User logged inProduct in stock
 
 ### Steps
 
-1.  Open Product page2. Click "Add to Cart"
+1.  Open Product page
+2.  Click "Add to Cart"
 
 ### Expected Result
 
-Product added to cartCart counter updatesAPI returns successProduct
-appears in Cart page
+Product added to cart
+Cart counter updates
+API returns success
+Productappears in Cart page
 
 ------------------------------------------------------------------------
 
@@ -548,11 +559,14 @@ Product quantity = 0
 
 ### Steps
 
-1.  Open Product page2. Click "Add to Cart"
+1.  Open Product page
+2.  Click "Add to Cart"
 
 ### Expected Result
 
-Add action blockedProper message displayedNo incorrect order created
+Add action blocked
+Proper message displayed
+No incorrect order created
 
 ------------------------------------------------------------------------
 
@@ -568,13 +582,16 @@ User logged in
 
 ### Steps
 
-1.  Open Product page2. Click "Add to Favourites"3. Click to Profile
-    page4. Click "Favourites"
+1. Open Product page
+2. Click "Add to Favourites"
+3. Click to Profile page
+4. Click "Favourites"
 
 ### Expected Result
 
-Product added to favouritesIcon changes stateProduct appears in Profile
-→ Favourites
+Product added to favourites
+Icon changes state
+Product appears in Profile → Favourites
 
 ------------------------------------------------------------------------
 
@@ -610,11 +627,15 @@ Product has reviews in DB
 
 ### Steps
 
-1.  Open Product page2. Scroll to Reviews section
+1.  Open Product page
+2. Scroll to Reviews section
 
 ### Expected Result
 
-All reviews are displayedEach review shows:-User name-Rating-Comment
+All reviews are displayedEach review shows:
+-User name
+-Rating
+-Comment
 
 ------------------------------------------------------------------------
 
@@ -630,13 +651,16 @@ User logged in
 
 ### Steps
 
-1.  Open Product page2. Enter review text3. Select rating4. Submit
-    review
+1. Open Product page
+2. Enter review text
+3. Select rating
+4. Submit review
 
 ### Expected Result
 
-Review successfully savedReview appears in list after refreshAPI returns
-201 DB contains new review record
+Review successfully savedReview appears in list after refresh
+API returns 201 
+DB contains new review record
 
 ------------------------------------------------------------------------
 
@@ -652,11 +676,12 @@ User logged out
 
 ### Steps
 
-1.  Open Product page2. Attempt to submit review
+1.  Open Product page
+2.  Attempt to submit review
 
 ### Expected Result
 
-User redirected to LoginORLogin to wtire a reviewReview not saved in DB
+User redirected to Login OR Login to wtire a reviewReview not saved in DB
 
 ------------------------------------------------------------------------
 
@@ -674,8 +699,9 @@ Manually enter invalid product ID in URL
 
 ### Expected Result
 
-Product not foundAPI returns 404No application crashNo sensitive data
-exposed
+Product not found
+API returns 404
+No application crashNo sensitive data exposed
 
 ------------------------------------------------------------------------
 
@@ -691,7 +717,8 @@ User is on Home Page
 
 ### Steps
 
-1.  Open Home Page2. Observe the hero carousel at the top of the page
+1.  Open Home Page
+2.  Observe the hero carousel at the top of the page
 
 ### Expected Result
 
@@ -709,7 +736,8 @@ Carousel is visible and properly displayed
 
 ### Steps
 
-1.  Click the "Next" arrow on the carousel2. Click the "Previous" arrow
+1.  Click the "Next" arrow on the carousel
+2. Click the "Previous" arrow
 
 ### Expected Result
 
@@ -790,47 +818,6 @@ action buttons
 
 ------------------------------------------------------------------------
 
-## C79 - Verify ""Add to Cart"" button
-
-**Type:** Other
-
-**Priority:** Medium
-
-### Preconditions
-
-### Steps
-
-### Expected Result
-
-------------------------------------------------------------------------
-
-## C80 - Verify ""Add to Favorites"" button
-
-**Type:** Other
-
-**Priority:** Medium
-
-### Preconditions
-
-### Steps
-
-### Expected Result
-
-------------------------------------------------------------------------
-
-## C81 - Verify pagination buttons visibility
-
-**Type:** Other
-
-**Priority:** Medium
-
-### Preconditions
-
-### Steps
-
-### Expected Result
-
-------------------------------------------------------------------------
 
 ## C82 - Verify page navigation
 
@@ -842,72 +829,13 @@ action buttons
 
 ### Steps
 
-1.  Click a page number2. Click "Next" button3. Click "Previous" button
+1.  Click a page number
+2. Click "Next" button
+3. Click "Previous" button
 
 ### Expected Result
 
 Product grid updates according to the selected page
-
-------------------------------------------------------------------------
-
-## C83 - Verify sorting by price (Low to High)
-
-**Type:** Other
-
-**Priority:** Medium
-
-### Preconditions
-
-### Steps
-
-### Expected Result
-
-------------------------------------------------------------------------
-
-## C84 - Verify sorting by price (High to Low)
-
-**Type:** Other
-
-**Priority:** Medium
-
-### Preconditions
-
-Open Product page
-
-### Steps
-
-### Expected Result
-
-------------------------------------------------------------------------
-
-## C85 - Verify sorting by price range \$0--\$500
-
-**Type:** Other
-
-**Priority:** Medium
-
-### Preconditions
-
-User is on Home Page.Products have prices that include values below \$0,
-exactly \$0, between \$0--\$500, exactly \$500, and above \$500.
-
-### Steps
-
-### Expected Result
-
-------------------------------------------------------------------------
-
-## C86 - Verify sorting by category
-
-**Type:** Other
-
-**Priority:** Medium
-
-### Preconditions
-
-### Steps
-
-### Expected Result
 
 ------------------------------------------------------------------------
 
@@ -924,7 +852,8 @@ User is on the category or home page
 ### Steps
 
 1.  Enter full product title in search bar (e.g., "Blue Cotton
-    T-Shirt")2. Click Search / press Enter
+    T-Shirt")
+ 2. Click Search / press Enter
 
 ### Expected Result
 
@@ -945,13 +874,14 @@ User is on the category or home page
 
 ### Steps
 
-1.  Enter a non-existing product name (Red Unicorn Jacket)2. Click
-    Search / press Enter
+1.  Enter a non-existing product name (Red Unicorn Jacket)
+2.  Click Search / press Enter
 
 ### Expected Result
 
-No products are displayedA message like "No products found" appearsPage
-layout remains correct
+No products are displayed
+A message like "No products found" appears
+Page layout remains correct
 
 ------------------------------------------------------------------------
 
@@ -967,13 +897,13 @@ User is on the category or home page
 
 ### Steps
 
-1.  Enter a partial product title (e.g., "Cotton")2. Click Search /
-    press Enter
+1.  Enter a partial product title (e.g., "Cotton")
+2. Click Search /press Enter
 
 ### Expected Result
 
-All products containing the input text in their title are
-displayedProducts without the partial word are not displayed
+All products containing the input text in their title are displayed
+Products without the partial word are not displayed
 
 ------------------------------------------------------------------------
 
@@ -989,12 +919,14 @@ User is on a product page or product grid; product is in stock
 
 ### Steps
 
-1.  Click "Add to Cart" on a product2. Open "Cart"
+1.  Click "Add to Cart" on a product
+2.  Open "Cart"
 
 ### Expected Result
 
-Product is added to the cartCart count updates correctlyProduct details
-(name, price, quantity) are correct in the cart
+Product is added to the cart
+Cart count updates correctly
+Product details (name, price, quantity) are correct in the cart
 
 ------------------------------------------------------------------------
 
@@ -1010,12 +942,14 @@ Cart has at least one product
 
 ### Steps
 
-1.  Open the cart2. Click "Remove" on a product
+1.  Open the cart
+2.  Click "Remove" on a product
 
 ### Expected Result
 
-Product is removed from the cartCart count updates correctlyCart total
-updates correctly
+Product is removed from the cart
+Cart count updates correctly
+Cart total updates correctly
 
 ------------------------------------------------------------------------
 
@@ -1031,16 +965,16 @@ Cart has one or more products
 
 ### Steps
 
-1.  Add multiple products to the cart with known prices2. Observe the
-    total price displayed in the cart3. Change quantity of one product
-    and observe the updated total4. Remove a product and check the
-    updated total
+1. Add multiple products to the cart with known prices
+2. Observe the total price displayed in the cart
+3. Change quantity of one product and observe the updated total
+4. Remove a product and check the updated total
 
 ### Expected Result
 
-Total price equals the sum of all product prices × quantitiesUpdates
-correctly when quantities change or products are removedNo rounding or
-calculation errors
+Total price equals the sum of all product prices × quantities
+Updates correctly when quantities change or products are removed
+No rounding or calculation errors
 
 ------------------------------------------------------------------------
 
@@ -1052,20 +986,22 @@ calculation errors
 
 ### Preconditions
 
-User is on the product page or product grid.Cart may be empty or have
-other products.Product is in stock.
+User is on the product page or product grid.
+Cart may be empty or have other products.
+Product is in stock.
 
 ### Steps
 
-1.  Click "Add to Cart" on a specific product (e.g., "Blue T-Shirt").2.
-    Open the cart and note the quantity of that product.3. Click "Add to
-    Cart" again for the same product.4. Repeat for a few more times if
-    needed
+1. Click "Add to Cart" on a specific product (e.g., "Blue T-Shirt").
+2. Open the cart and note the quantity of that product.
+3. Click "Add to Cart" again for the same product.
+4. Repeat for a few more times if needed
 
 ### Expected Result
 
-The cart shows only one entry for that product. The quantity increments
-with each addition  No duplicate product rows appear in the cart.
+The cart shows only one entry for that product. 
+The quantity increments with each addition  
+No duplicate product rows appear in the cart.
 
 ------------------------------------------------------------------------
 
@@ -1081,14 +1017,15 @@ User is on the website.Cart is empty.
 
 ### Steps
 
-1.  Open the cart page.2. Verify that the cart has no products.3.
-    Attempt to click "Proceed to Payment" or "Checkout".
+1. Open the cart page.
+2. Verify that the cart has no products.
+3.Attempt to click "Proceed to Payment" or "Checkout".
 
 ### Expected Result
 
-The "Proceed to Payment" button should be disabled or unclickable. If
-clicked, a message should appear: "Your cart is empty" or similar. User
-cannot access payment page until at least one product is added.
+The "Proceed to Payment" button should be disabled or unclickable. 
+If clicked, a message should appear: "Your cart is empty" or similar. 
+User cannot access payment page until at least one product is added.
 
 ------------------------------------------------------------------------
 
@@ -1104,13 +1041,14 @@ User has at least one product in cartUser is on Checkout/Payment page
 
 ### Steps
 
-1.  Proceed to Payment page2. Enter valid mock payment details3. Click
-    "Pay Now"
+1. Proceed to Payment page
+2. Enter valid mock payment details
+3. Click "Pay Now"
 
 ### Expected Result
 
-Payment request is processedUser is redirected to confirmation/success
-pageOrder is created successfully
+Payment request is processedUser is redirected to confirmation/success page
+Order is created successfully
 
 ------------------------------------------------------------------------
 
@@ -1126,12 +1064,15 @@ Cart contains productsUser is on Payment page
 
 ### Steps
 
-1.  Enter valid card details2. Confirm payment3. Wait for response
+1.  Enter valid card details
+2.  Confirm payment
+3.  Wait for response
 
 ### Expected Result
 
-Payment is successfulSuccess message appearsOrder confirmation page is
-displayedCart is clearedOrder ID is generated
+Payment is successfulSuccess message appears
+Order confirmation page is displayed
+Cart is clearedOrder ID is generated
 
 ------------------------------------------------------------------------
 
@@ -1147,13 +1088,14 @@ Enter invalid or declined card detailsClick "Pay Now"
 
 ### Steps
 
-1.  Enter invalid or declined card details2. Click "Pay Now"
+1.  Enter invalid or declined card details
+2.  Click "Pay Now"
 
 ### Expected Result
 
-Payment is declinedError message appears (e.g., "Payment Failed" or
-"Card Declined")User remains on payment pageCart is NOT clearedUser can
-retry payment
+Payment is declinedError message appears (e.g., "Payment Failed" or "Card Declined")
+User remains on payment page
+Cart is NOT clearedUser can retry payment
 
 ------------------------------------------------------------------------
 
@@ -1167,11 +1109,13 @@ retry payment
 
 ### Steps
 
-1.  Leave required fields empty2. Click "Pay Now"
+1.  Leave required fields empty
+2.  Click "Pay Now"
 
 ### Expected Result
 
-Validation errors appearPayment is not processed
+Validation errors appear
+Payment is not processed
 
 ------------------------------------------------------------------------
 
@@ -1185,12 +1129,13 @@ Validation errors appearPayment is not processed
 
 ### Steps
 
-1.  Enter invalid card number (e.g., letters or too short number)2.
-    Click "Pay Now"
+1.  Enter invalid card number (e.g., letters or too short number)
+2.  Click "Pay Now"
 
 ### Expected Result
 
-Validation error appearsPayment is not processed
+Validation error appears
+Payment is not processed
 
 ------------------------------------------------------------------------
 
@@ -1204,11 +1149,13 @@ Validation error appearsPayment is not processed
 
 ### Steps
 
-1.  Enter expired expiration date2. Click "Pay Now"
+1.  Enter expired expiration date
+2.  Click "Pay Now"
 
 ### Expected Result
 
-Error message appearsPayment is blocked
+Error message appears
+Payment is blocked
 
 ------------------------------------------------------------------------
 
@@ -1222,11 +1169,13 @@ Error message appearsPayment is blocked
 
 ### Steps
 
-1.  Start payment process2. Refresh page
+1.  Start payment process
+2. Refresh page
 
 ### Expected Result
 
-No duplicate charge occursSystem handles session correctly
+No duplicate charge occurs
+System handles session correctly
 
 ------------------------------------------------------------------------
 
@@ -1238,18 +1187,21 @@ No duplicate charge occursSystem handles session correctly
 
 ### Preconditions
 
-Admin is logged inAdmin is on Dashboard page
+Admin is logged in
+Admin is on Dashboard page
 
 ### Steps
 
-1.  Navigate to "Products" section2. Click "Create Product" / "Add
-    Product"3. Fill in all required fields (Title, Price, Category,
-    Description, Image, Stock)4. Click "Save"
+1.  Navigate to "Products" section
+2.  Click "Create Product" / "Add Product"
+3. Fill in all required fields (Title, Price, Category, Description, Image, Stock)
+4. Click "Save"
 
 ### Expected Result
 
-Product is successfully createdSuccess message appearsNew product
-appears in product listProduct is visible on the store page
+Product is successfully createdSuccess message appears
+New product appears in product list
+Product is visible on the store page
 
 ------------------------------------------------------------------------
 
@@ -1265,14 +1217,17 @@ Product already existsAdmin is logged in
 
 ### Steps
 
-1.  Go to "Products" section2. Select an existing product3. Click
-    "Edit"4. Change product details (e.g., price or title)5. Click
-    "Save"
+1. Go to "Products" section
+2. Select an existing product
+3. Click "Edit"
+4. Change product details (e.g., price or title)
+5. Click "Save"
 
 ### Expected Result
 
-Product details are updated successfullyChanges are reflected in product
-listChanges are visible on the store page
+Product details are updated successfully
+Changes are reflected in product list
+Changes are visible on the store page
 
 ------------------------------------------------------------------------
 
@@ -1304,12 +1259,12 @@ Admin is logged in
 
 ### Steps
 
-1.  Navigate to "Users" section2. View user list
+1.  Navigate to "Users" section
+2.  View user list
 
 ### Expected Result
 
-All registered users are displayedUser details are visible (Name, Email,
-Role, Status)
+All registered users are displayedUser details are visible (Name, Email, Role, Status)
 
 ------------------------------------------------------------------------
 
@@ -1325,13 +1280,16 @@ At least one user exists Admin is logged in
 
 ### Steps
 
-1.  Go to "Users" section2. Select a user3. Change role (e.g., User →
-    Admin or Admin → User)4. Save changes
+1. Go to "Users" section
+2. Select a user
+3. Change role (e.g., User → Admin or Admin → User)
+4. Save changes
 
 ### Expected Result
 
-Role is updated successfullyChanges are reflected immediatelyUpdated
-user permissions apply after role change
+Role is updated successfully
+Changes are reflected immediately
+Updated user permissions apply after role change
 
 ------------------------------------------------------------------------
 
@@ -1345,13 +1303,15 @@ user permissions apply after role change
 
 ### Steps
 
-1.  Go to "Create Product"2. Leave required fields empty (Title, Price,
-    Category, etc.)3. Click "Save"
+1. Go to "Create Product"
+2. Leave required fields empty (Title, Price, Category, etc.)
+3. Click "Save"
 
 ### Expected Result
 
-Validation errors appear for required fieldsProduct is NOT createdUser
-remains on Create Product page
+Validation errors appear for required fields
+Product is NOT created
+User remains on Create Product page
 
 ------------------------------------------------------------------------
 
@@ -1365,13 +1325,15 @@ remains on Create Product page
 
 ### Steps
 
-1.  Enter text instead of numbers in Price field (e.g., "abc123")2.
-    Enter negative value (e.g., -50)3. Click "Save"
+1.  Enter text instead of numbers in Price field (e.g., "abc123")
+2.  Enter negative value (e.g., -50)
+3.  Click "Save"
 
 ### Expected Result
 
-Error message appearsProduct is not createdOnly valid positive numeric
-values are accepted
+Error message appears
+Product is not created
+Only valid positive numeric values are accepted
 
 ------------------------------------------------------------------------
 
@@ -1385,12 +1347,13 @@ values are accepted
 
 ### Steps
 
-1.  Enter extremely large price (e.g., 999999999999)2. Click "Save"
+1.  Enter extremely large price (e.g., 999999999999)
+2.  Click "Save"
 
 ### Expected Result
 
-Either validation prevents unrealistic valuesOr system handles large
-values without crash
+Either validation prevents unrealistic values
+Or system handles large values without crash
 
 ------------------------------------------------------------------------
 
@@ -1402,12 +1365,14 @@ values without crash
 
 ### Preconditions
 
-Product already existsAdmin is logged in
+Product already exists
+Admin is logged in
 
 ### Steps
 
-1.  Go to "Products" section2. Select an existing product3. Click
-    "delete"
+1. Go to "Products" section
+2. Select an existing product
+3. Click "delete"
 
 ### Expected Result
 
@@ -1425,11 +1390,14 @@ Product delete successfully
 
 ### Steps
 
-1.  Open existing product2. Clear title field3. Click "Save"
+1. Open existing product
+2. Clear title field
+3. Click "Save"
 
 ### Expected Result
 
-Validation error appearsChanges are not saved
+Validation error appears
+Changes are not saved
 
 ------------------------------------------------------------------------
 
@@ -1443,12 +1411,13 @@ Validation error appearsChanges are not saved
 
 ### Steps
 
-1.  Log in as regular user2. Try to access /admin route directly
+1.  Log in as regular user
+2. Try to access /admin route directly
 
 ### Expected Result
 
-Access is deniedUser is redirected (e.g., to Home or Login page)Error
-message like "Access Denied" appears
+Access is deniedUser is redirected (e.g., to Home or Login page)
+Error message like "Access Denied" appears
 
 ------------------------------------------------------------------------
 
@@ -1462,14 +1431,16 @@ message like "Access Denied" appears
 
 ### Steps
 
-1.  Open Home page2. Navigate to other pages (Products, Cart, Admin,
-    etc.)
+1.  Open Home page
+2.  Navigate to other pages (Products, Cart, Admin, etc.)
 
 ### Expected Result
 
-Header is visible on all pagesLogo is displayed correctlyNavigation
-links are aligned properlyNo overlapping elementsResponsive behavior
-works on different screen sizes
+Header is visible on all pages
+Logo is displayed correctly
+Navigation links are aligned properly
+No overlapping elements
+Responsive behavior works on different screen sizes
 
 ------------------------------------------------------------------------
 
@@ -1487,8 +1458,10 @@ Scroll to bottom of each page
 
 ### Expected Result
 
-Footer is visible on all pagesAll links are clickableContact / copyright
-information is displayed correctlyNo broken layout
+Footer is visible on all pages
+All links are clickable
+Contact / copyright information is displayed correctly
+No broken layout
 
 ------------------------------------------------------------------------
 
@@ -1502,12 +1475,14 @@ information is displayed correctlyNo broken layout
 
 ### Steps
 
-1.  Navigate between pages2. Observe main content section
+1.  Navigate between pages
+2.  Observe main content section
 
 ### Expected Result
 
-Content loads without layout shiftNo broken UI elementsNo overlapping or
-hidden components
+Content loads without layout shift
+No broken UI elements
+No overlapping or hidden components
 
 ------------------------------------------------------------------------
 
@@ -1521,12 +1496,14 @@ hidden components
 
 ### Steps
 
-1.  Click each navigation link in Header2. Navigate using Footer links
-    (if available)
+1.  Click each navigation link in Header
+2.  Navigate using Footer links
 
 ### Expected Result
 
-Each link redirects to correct pageURL updates correctlyNo 404 errors
+Each link redirects to correct page
+URL updates correctly
+No 404 errors
 
 ------------------------------------------------------------------------
 
@@ -1540,12 +1517,15 @@ Each link redirects to correct pageURL updates correctlyNo 404 errors
 
 ### Steps
 
-1.  Navigate between multiple pages2. Click browser Back button3. Click
-    Forward button
+1.  Navigate between multiple pages
+2.  Click browser Back button
+3.  Click Forward button
 
 ### Expected Result
 
-Pages load correctlyNo broken stateData remains consistent
+Pages load correctly
+No broken state
+Data remains consistent
 
 ------------------------------------------------------------------------
 
@@ -1559,13 +1539,14 @@ Pages load correctlyNo broken stateData remains consistent
 
 ### Steps
 
-1.  Click language switcher2. Select Ukrainian (UA)3. Switch back to
-    English (ENG)
+1.  Click language switcher
+2.  Select Ukrainian (UA)
+3.  Switch back to English (ENG)
 
 ### Expected Result
 
-All UI text changes to selected languageNo mixed-language
-contentButtons, labels, and messages are translated
+All UI text changes to selected language
+No mixed-language contentButtons, labels, and messages are translated
 
 ------------------------------------------------------------------------
 
@@ -1579,7 +1560,8 @@ contentButtons, labels, and messages are translated
 
 ### Steps
 
-1.  Change language to UA2. Refresh page
+1.  Change language to UA
+2.  Refresh page
 
 ### Expected Result
 
@@ -1633,9 +1615,12 @@ No red errors in consoleNo uncaught exceptions
 
 ### Steps
 
-1.  Add product to cart2. Remove product3. Perform search4. Switch
-    language
+1. Add product to cart
+2. Remove product
+3. Perform search
+4. Switch language
 
 ### Expected Result
 
-No console errors during actionsNo failed network requests
+No console errors during actions
+No failed network requests
