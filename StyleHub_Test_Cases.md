@@ -290,7 +290,8 @@ User is logged out
 
 ### Expected Result
 
-System redirects user to Login pageProfile data is not displayed
+System redirects user to Login page  
+Profile data is not displayed
 
 ------------------------------------------------------------------------
 
@@ -361,7 +362,7 @@ User logged incurrent password: 12345new: 123456
 
 ### Expected Result
 
-Password update request returns success status
+Password update request returns success status  
 Old password no longer works
 
 ------------------------------------------------------------------------
@@ -384,7 +385,8 @@ User logged in
 
 ### Expected Result
 
-System displays error messagePassword is not changed
+System displays error message  
+Password is not changed
 
 ------------------------------------------------------------------------
 
@@ -431,7 +433,7 @@ User logged inUser has no favourite products
 
 ### Expected Result
 
-System displays message like: "No favourite products yet"
+System displays message like: "No favourite products yet"  
 No errors appear in console
 
 ------------------------------------------------------------------------
@@ -454,9 +456,12 @@ User logged inAt least one completed order exists in database
 
 ### Expected Result
 
-List of previous orders is displayedEach order contains:
--Order ID-Date-Total amount
--List of purchased products
+List of previous orders is displayed  
+Each order contains:  
+-Order ID  
+-Date  
+-Total amount  
+-List of purchased products  
 
 ------------------------------------------------------------------------
 
@@ -497,9 +502,9 @@ Product exists in database
 
 ### Expected Result
 
-Product page opens successfullyCorrect product information is
-displayed
-Network request returns 200
+Product page opens successfully  
+Correct product information is displayed  
+Network request returns 200  
 
 ------------------------------------------------------------------------
 
@@ -520,8 +525,10 @@ Product exists in DB
 
 ### Expected Result
 
-Title matches DBDescription matches DB
-Price matches DBAvailable quantity matches DB
+Title matches DB  
+Description matches DB  
+Price matches DB  
+Available quantity matches DB  
 
 ------------------------------------------------------------------------
 
@@ -542,10 +549,10 @@ User logged inProduct in stock
 
 ### Expected Result
 
-Product added to cart
-Cart counter updates
-API returns success
-Productappears in Cart page
+Product added to cart  
+Cart counter updates  
+API returns success  
+Productappears in Cart page  
 
 ------------------------------------------------------------------------
 
@@ -566,9 +573,9 @@ Product quantity = 0
 
 ### Expected Result
 
-Add action blocked
-Proper message displayed
-No incorrect order created
+Add action blocked  
+Proper message displayed  
+No incorrect order created  
 
 ------------------------------------------------------------------------
 
@@ -591,9 +598,9 @@ User logged in
 
 ### Expected Result
 
-Product added to favourites
-Icon changes state
-Product appears in Profile → Favourites
+Product added to favourites  
+Icon changes state  
+Product appears in Profile → Favourites  
 
 ------------------------------------------------------------------------
 
@@ -613,7 +620,8 @@ Click "Add to Favourites" again
 
 ### Expected Result
 
-Product not duplicatedNo duplicate entry in DB
+Product not duplicated  
+No duplicate entry in DB  
 
 ------------------------------------------------------------------------
 
@@ -634,10 +642,10 @@ Product has reviews in DB
 
 ### Expected Result
 
-All reviews are displayedEach review shows:
--User name
--Rating
--Comment
+All reviews are displayedEach review shows:  
+-User name  
+-Rating  
+-Comment  
 
 ------------------------------------------------------------------------
 
@@ -684,7 +692,8 @@ User logged out
 
 ### Expected Result
 
-User redirected to Login OR Login to wtire a reviewReview not saved in DB
+User redirected to Login OR Login to wtire a review  
+Review not saved in DB  
 
 ------------------------------------------------------------------------
 
@@ -702,9 +711,9 @@ Manually enter invalid product ID in URL
 
 ### Expected Result
 
-Product not found
-API returns 404
-No application crashNo sensitive data exposed
+Product not found  
+API returns 404  
+No application crashNo sensitive data exposed  
 
 ------------------------------------------------------------------------
 
@@ -882,9 +891,9 @@ User is on the category or home page
 
 ### Expected Result
 
-No products are displayed
-A message like "No products found" appears
-Page layout remains correct
+No products are displayed  
+A message like "No products found" appears  
+Page layout remains correct  
 
 ------------------------------------------------------------------------
 
@@ -905,8 +914,8 @@ User is on the category or home page
 
 ### Expected Result
 
-All products containing the input text in their title are displayed
-Products without the partial word are not displayed
+All products containing the input text in their title are displayed  
+Products without the partial word are not displayed  
 
 ------------------------------------------------------------------------
 
@@ -927,9 +936,9 @@ User is on a product page or product grid; product is in stock
 
 ### Expected Result
 
-Product is added to the cart
-Cart count updates correctly
-Product details (name, price, quantity) are correct in the cart
+Product is added to the cart  
+Cart count updates correctly  
+Product details (name, price, quantity) are correct in the cart  
 
 ------------------------------------------------------------------------
 
@@ -950,9 +959,9 @@ Cart has at least one product
 
 ### Expected Result
 
-Product is removed from the cart
-Cart count updates correctly
-Cart total updates correctly
+Product is removed from the cart  
+Cart count updates correctly  
+Cart total updates correctly  
 
 ------------------------------------------------------------------------
 
@@ -975,9 +984,9 @@ Cart has one or more products
 
 ### Expected Result
 
-Total price equals the sum of all product prices × quantities
-Updates correctly when quantities change or products are removed
-No rounding or calculation errors
+Total price equals the sum of all product prices × quantities  
+Updates correctly when quantities change or products are removed  
+No rounding or calculation errors  
 
 ------------------------------------------------------------------------
 
@@ -1004,7 +1013,7 @@ Product is in stock.
 
 The cart shows only one entry for that product. 
 The quantity increments with each addition  
-No duplicate product rows appear in the cart.
+No duplicate product rows appear in the cart.  
 
 ------------------------------------------------------------------------
 
@@ -1028,7 +1037,7 @@ User is on the website.Cart is empty.
 
 The "Proceed to Payment" button should be disabled or unclickable. 
 If clicked, a message should appear: "Your cart is empty" or similar. 
-User cannot access payment page until at least one product is added.
+User cannot access payment page until at least one product is added.  
 
 ------------------------------------------------------------------------
 
@@ -1050,8 +1059,8 @@ User has at least one product in cartUser is on Checkout/Payment page
 
 ### Expected Result
 
-Payment request is processedUser is redirected to confirmation/success page
-Order is created successfully
+Payment request is processedUser is redirected to confirmation/success page  
+Order is created successfully  
 
 ------------------------------------------------------------------------
 
@@ -1073,9 +1082,9 @@ Cart contains productsUser is on Payment page
 
 ### Expected Result
 
-Payment is successfulSuccess message appears
-Order confirmation page is displayed
-Cart is clearedOrder ID is generated
+Payment is successfulSuccess message appears  
+Order confirmation page is displayed  
+Cart is clearedOrder ID is generated  
 
 ------------------------------------------------------------------------
 
@@ -1096,9 +1105,10 @@ Enter invalid or declined card detailsClick "Pay Now"
 
 ### Expected Result
 
-Payment is declinedError message appears (e.g., "Payment Failed" or "Card Declined")
-User remains on payment page
-Cart is NOT clearedUser can retry payment
+Payment is declinedError message appears (e.g., "Payment Failed" or "Card Declined")  
+User remains on payment page  
+Cart is NOT cleared  
+User can retry payment  
 
 ------------------------------------------------------------------------
 
@@ -1117,8 +1127,8 @@ Cart is NOT clearedUser can retry payment
 
 ### Expected Result
 
-Validation errors appear
-Payment is not processed
+Validation errors appear  
+Payment is not processed  
 
 ------------------------------------------------------------------------
 
@@ -1137,8 +1147,8 @@ Payment is not processed
 
 ### Expected Result
 
-Validation error appears
-Payment is not processed
+Validation error appears  
+Payment is not processed  
 
 ------------------------------------------------------------------------
 
@@ -1157,8 +1167,8 @@ Payment is not processed
 
 ### Expected Result
 
-Error message appears
-Payment is blocked
+Error message appears  
+Payment is blocked  
 
 ------------------------------------------------------------------------
 
@@ -1177,8 +1187,8 @@ Payment is blocked
 
 ### Expected Result
 
-No duplicate charge occurs
-System handles session correctly
+No duplicate charge occurs  
+System handles session correctly  
 
 ------------------------------------------------------------------------
 
@@ -1202,9 +1212,10 @@ Admin is on Dashboard page
 
 ### Expected Result
 
-Product is successfully createdSuccess message appears
-New product appears in product list
-Product is visible on the store page
+Product is successfully created  
+Success message appears  
+New product appears in product list  
+Product is visible on the store page  
 
 ------------------------------------------------------------------------
 
@@ -1228,9 +1239,9 @@ Product already existsAdmin is logged in
 
 ### Expected Result
 
-Product details are updated successfully
-Changes are reflected in product list
-Changes are visible on the store page
+Product details are updated successfully  
+Changes are reflected in product list  
+Changes are visible on the store page  
 
 ------------------------------------------------------------------------
 
@@ -1267,7 +1278,8 @@ Admin is logged in
 
 ### Expected Result
 
-All registered users are displayedUser details are visible (Name, Email, Role, Status)
+All registered users are displayed  
+User details are visible (Name, Email, Role, Status)  
 
 ------------------------------------------------------------------------
 
@@ -1290,9 +1302,9 @@ At least one user exists Admin is logged in
 
 ### Expected Result
 
-Role is updated successfully
-Changes are reflected immediately
-Updated user permissions apply after role change
+Role is updated successfully  
+Changes are reflected immediately  
+Updated user permissions apply after role change  
 
 ------------------------------------------------------------------------
 
@@ -1312,9 +1324,9 @@ Updated user permissions apply after role change
 
 ### Expected Result
 
-Validation errors appear for required fields
-Product is NOT created
-User remains on Create Product page
+Validation errors appear for required fields  
+Product is NOT created  
+User remains on Create Product page  
 
 ------------------------------------------------------------------------
 
@@ -1334,9 +1346,9 @@ User remains on Create Product page
 
 ### Expected Result
 
-Error message appears
-Product is not created
-Only valid positive numeric values are accepted
+Error message appears  
+Product is not created  
+Only valid positive numeric values are accepted  
 
 ------------------------------------------------------------------------
 
@@ -1355,7 +1367,7 @@ Only valid positive numeric values are accepted
 
 ### Expected Result
 
-Either validation prevents unrealistic values
+Either validation prevents unrealistic values 
 Or system handles large values without crash
 
 ------------------------------------------------------------------------
@@ -1399,8 +1411,8 @@ Product delete successfully
 
 ### Expected Result
 
-Validation error appears
-Changes are not saved
+Validation error appears  
+Changes are not saved  
 
 ------------------------------------------------------------------------
 
@@ -1419,8 +1431,8 @@ Changes are not saved
 
 ### Expected Result
 
-Access is deniedUser is redirected (e.g., to Home or Login page)
-Error message like "Access Denied" appears
+Access is deniedUser is redirected (e.g., to Home or Login page)  
+Error message like "Access Denied" appears  
 
 ------------------------------------------------------------------------
 
@@ -1439,11 +1451,11 @@ Error message like "Access Denied" appears
 
 ### Expected Result
 
-Header is visible on all pages
-Logo is displayed correctly
-Navigation links are aligned properly
-No overlapping elements
-Responsive behavior works on different screen sizes
+Header is visible on all pages  
+Logo is displayed correctly  
+Navigation links are aligned properly  
+No overlapping elements  
+Responsive behavior works on different screen sizes  
 
 ------------------------------------------------------------------------
 
@@ -1461,10 +1473,10 @@ Scroll to bottom of each page
 
 ### Expected Result
 
-Footer is visible on all pages
-All links are clickable
-Contact / copyright information is displayed correctly
-No broken layout
+Footer is visible on all pages  
+All links are clickable  
+Contact / copyright information is displayed correctly  
+No broken layout  
 
 ------------------------------------------------------------------------
 
@@ -1483,9 +1495,9 @@ No broken layout
 
 ### Expected Result
 
-Content loads without layout shift
-No broken UI elements
-No overlapping or hidden components
+Content loads without layout shift  
+No broken UI elements  
+No overlapping or hidden components  
 
 ------------------------------------------------------------------------
 
@@ -1504,9 +1516,9 @@ No overlapping or hidden components
 
 ### Expected Result
 
-Each link redirects to correct page
-URL updates correctly
-No 404 errors
+Each link redirects to correct page  
+URL updates correctly  
+No 404 errors  
 
 ------------------------------------------------------------------------
 
@@ -1526,9 +1538,9 @@ No 404 errors
 
 ### Expected Result
 
-Pages load correctly
-No broken state
-Data remains consistent
+Pages load correctly  
+No broken state  
+Data remains consistent  
 
 ------------------------------------------------------------------------
 
@@ -1548,8 +1560,8 @@ Data remains consistent
 
 ### Expected Result
 
-All UI text changes to selected language
-No mixed-language contentButtons, labels, and messages are translated
+All UI text changes to selected language  
+No mixed-language contentButtons, labels, and messages are translated  
 
 ------------------------------------------------------------------------
 
@@ -1625,5 +1637,5 @@ No red errors in consoleNo uncaught exceptions
 
 ### Expected Result
 
-No console errors during actions
-No failed network requests
+No console errors during actions  
+No failed network requests  
