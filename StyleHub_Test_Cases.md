@@ -11,6 +11,7 @@
 ### Preconditions
 Open site:
 https://qatestingapp.netlify.app/
+
 User is on Registration page
 
 ### Steps
