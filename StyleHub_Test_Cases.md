@@ -869,8 +869,8 @@ User is on the category or home page
 
 ### Expected Result
 
-Only product(s) with exact title are displayedNo unrelated products are
-shown
+Only product(s) with exact title are displayed  
+No unrelated products are shown  
 
 ------------------------------------------------------------------------
 
