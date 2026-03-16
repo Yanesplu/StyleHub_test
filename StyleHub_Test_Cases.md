@@ -21,7 +21,8 @@ User is on Registration page
 4.   Select  role "user"
 5. Submit form
 Verify record in database using SQL
-queryTest Data: a@mail.com
+queryTest Data:
+a@mail.com
 
 ### Expected Result
 
