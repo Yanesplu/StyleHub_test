@@ -6,7 +6,7 @@
 
 **Type:** Functional
 
-**Priority:** Medium
+**Priority:** High
 
 ### Preconditions
 Open site:
@@ -57,7 +57,7 @@ Account is verified and user is redirected to Login page.
 
 **Type:** Functional
 
-**Priority:** Medium
+**Priority:** High
 
 ### Preconditions
 
@@ -76,9 +76,9 @@ Validation errors are displayed.
 
 ## C41 - Verify registration fails with invalid email format
 
-**Type:** Functional
+**Type:** Negative
 
-**Priority:** Medium
+**Priority:** High
 
 ### Preconditions
 
@@ -98,9 +98,9 @@ Error message about invalid email format is displayed.
 
 ## C42 - Verify registration fails with already existing email
 
-**Type:** Other
+**Type:** Negative
 
-**Priority:** Medium
+**Priority:** High
 
 ### Preconditions
 
@@ -121,7 +121,7 @@ System displays "Email already exists" error.
 
 **Type:** Functional
 
-**Priority:** Medium
+**Priority:** Critical
 
 ### Preconditions
 
@@ -141,7 +141,7 @@ User is logged in and redirected to Home page.
 
 ## C44 - Verify login fails with incorrect password
 
-**Type:** Functional
+**Type:** Negative
 
 **Priority:** Medium
 
@@ -163,9 +163,9 @@ Error message is displayed.
 
 ## C45 - Verify login fails with non-existing email
 
-**Type:** Other
+**Type:** Negative
 
-**Priority:** Medium
+**Priority:** High
 
 ### Preconditions
 
@@ -185,9 +185,9 @@ Error message is displayed.
 
 ## C46 - Verify SQL injection attempt in login field
 
-**Type:** Other
+**Type:** Security
 
-**Priority:** Medium
+**Priority:** Critical
 
 ### Preconditions
 
@@ -207,7 +207,7 @@ Login fails and system does not authenticate user.
 
 ## C47 - Verify logout functionality
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -227,7 +227,7 @@ User is logged out and redirected to Home page.
 
 ## C57 - Verify favourites list updates after removing product
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -249,7 +249,7 @@ Removed product is no longer displayed
 
 ## C48 - Verify authorized user can access Profile page
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -275,7 +275,7 @@ User is logged in
 
 ## C49 - Verify unauthorized user cannot access Profile page
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -296,7 +296,7 @@ System redirects user to Login pageProfile data is not displayed
 
 ## C50 - Verify user can successfully update Name
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -321,7 +321,7 @@ User logged inNew Name: Noname
 
 ## C52 - Verify user cannot save empty name
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -342,7 +342,7 @@ Validation error is displayed and data is not updated.
 
 ## C53 - Verify user can change password successfully
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -368,7 +368,7 @@ Old password no longer works
 
 ## C54 - Verify password change fails with incorrect current password
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -390,7 +390,7 @@ System displays error messagePassword is not changed
 
 ## C55 - Verify user can view favourite
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -416,7 +416,7 @@ List of favourite products is displayed
 
 ## C56 - Verify empty favourites state is handled correctly
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -438,7 +438,7 @@ No errors appear in console
 
 ## C58 - Verify user can view order history
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -462,7 +462,7 @@ List of previous orders is displayedEach order contains:
 
 ## C59 - Verify empty order history is handled correctly
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -483,7 +483,7 @@ Message displayed: "No orders yet"
 
 ## C60 - Verify product page loads correctly
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** High
 
@@ -527,7 +527,7 @@ Price matches DBAvailable quantity matches DB
 
 ## C62 - Verify user can add product to cart
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -551,7 +551,7 @@ Productappears in Cart page
 
 ## C63 - Verify user cannot add out-of-stock product to cart
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -574,7 +574,7 @@ No incorrect order created
 
 ## C65 - Verify user can add product to favourites
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -599,7 +599,7 @@ Product appears in Profile → Favourites
 
 ## C66 - Verify duplicate product is not added multiple times to favourites
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -619,7 +619,7 @@ Product not duplicatedNo duplicate entry in DB
 
 ## C68 - Verify product reviews are displayed
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -643,7 +643,7 @@ All reviews are displayedEach review shows:
 
 ## C69 - Verify user can add review to product
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -668,7 +668,7 @@ DB contains new review record
 
 ## C70 - Verify unauthorized user cannot add review
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -689,7 +689,7 @@ User redirected to Login OR Login to wtire a reviewReview not saved in DB
 
 ## C71 - Verify invalid product ID returns error page
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -709,7 +709,7 @@ No application crashNo sensitive data exposed
 
 ## C72 - Verify carousel visibility
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -730,7 +730,7 @@ Carousel is visible and properly displayed
 
 ## C73 - Verify carousel navigation (next/previous)
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -749,7 +749,7 @@ Carousel slides to the next and previous images correctly
 
 ## C74 - Verify carousel auto-slide
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -768,7 +768,7 @@ interval
 
 ## C75 - Verify carousel click action
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -787,7 +787,7 @@ carousel image
 
 ## C77 - Verify products are displayed
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -808,7 +808,7 @@ action buttons
 
 ## C78 - Verify product details link
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -823,7 +823,7 @@ action buttons
 
 ## C82 - Verify page navigation
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -843,7 +843,7 @@ Product grid updates according to the selected page
 
 ## C87 - Search by Title
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -866,7 +866,7 @@ shown
 
 ## C88 - Verify search handles no matching results correctly
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -889,7 +889,7 @@ Page layout remains correct
 
 ## C89 - Verify search returns products that partially match input
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -911,7 +911,7 @@ Products without the partial word are not displayed
 
 ## C90 - Verify user can add a product to the cart
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -934,7 +934,7 @@ Product details (name, price, quantity) are correct in the cart
 
 ## C91 - Verify user can remove a product from the cart
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -957,7 +957,7 @@ Cart total updates correctly
 
 ## C92 - Verify cart total calculation is correct
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -982,7 +982,7 @@ No rounding or calculation errors
 
 ## C94 - Verify Items in Cart Increment Instead of Duplicate
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -1009,7 +1009,7 @@ No duplicate product rows appear in the cart.
 
 ## C96 - Verify empty cart cannot Proceed to Payment
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -1033,7 +1033,7 @@ User cannot access payment page until at least one product is added.
 
 ## C101 - Verify mock payment flow works correctly
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -1056,7 +1056,7 @@ Order is created successfully
 
 ## C102 - Verify successful payment scenario
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -1080,7 +1080,7 @@ Cart is clearedOrder ID is generated
 
 ## C103 - Verify system handles failed payment properly
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -1103,7 +1103,7 @@ Cart is NOT clearedUser can retry payment
 
 ## C104 - Verify required field validation
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -1123,7 +1123,7 @@ Payment is not processed
 
 ## C106 - Verify card number format validation
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -1183,7 +1183,7 @@ System handles session correctly
 
 ## C109 - Verify admin can create a new product
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -1209,7 +1209,7 @@ Product is visible on the store page
 
 ## C110 - Verify admin can edit an existing product
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -1235,7 +1235,7 @@ Changes are visible on the store page
 
 ## C111 - Verify admin can view all products
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -1251,7 +1251,7 @@ Admin is logged in
 
 ## C112 - Verify admin can view and manage users
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -1272,7 +1272,7 @@ All registered users are displayedUser details are visible (Name, Email, Role, S
 
 ## C113 - Verify admin can change user role
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -1297,7 +1297,7 @@ Updated user permissions apply after role change
 
 ## C114 - Verify product cannot be created with empty required fields
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -1341,7 +1341,7 @@ Only valid positive numeric values are accepted
 
 ## C117 - Verify system handles boundary values
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -1361,7 +1361,7 @@ Or system handles large values without crash
 
 ## C118 - Verify admin can delete an existing product
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -1384,7 +1384,7 @@ Product delete successfully
 
 ## C119 - Verify product cannot be updated with invalid data
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -1405,7 +1405,7 @@ Changes are not saved
 
 ## C120 - Verify non-admin users cannot access dashboard
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -1425,7 +1425,7 @@ Error message like "Access Denied" appears
 
 ## C122 - Verify header is displayed correctly on all pages
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
@@ -1490,7 +1490,7 @@ No overlapping or hidden components
 
 ## C125 - Verify all navigation links work
 
-**Type:** Other
+**Type:** Functional
 
 **Priority:** Medium
 
