@@ -21,14 +21,14 @@ User is on Registration page
 3.  Enter valid password
 4.   Select  role "user"
 5. Submit form
-Verify record in database using SQL
-queryTest Data:
+Verify record in database using SQL query
+Test Data:
 a@mail.com
 
 ### Expected Result
 
-User account is successfully created and system redirects user to Login
-page.User record created in DB
+User account is successfully created and system redirects user to Login page.
+User record created in DB
 
 ------------------------------------------------------------------------
 
