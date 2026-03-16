@@ -3,7 +3,7 @@
 Manual testing project for an **e-commerce clothing website** built with **Next.js** and **PostgreSQL**.
 
 This project demonstrates practical QA skills including **test case design, bug reporting, API testing, and database validation**.
-https://qatestingapp.netlify.app/
+# https://qatestingapp.netlify.app/
 ---
 
 # Project Overview
