@@ -660,9 +660,9 @@ User logged in
 
 ### Expected Result
 
-Review successfully savedReview appears in list after refresh
-API returns 201 
-DB contains new review record
+Review successfully saved  Review appears in list after refresh  
+API returns 201  
+DB contains new review record  
 
 ------------------------------------------------------------------------
 
