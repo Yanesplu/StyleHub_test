@@ -22,7 +22,7 @@ User is on Registration page
 4.   Select  role "user"
 5. Submit form
 Verify record in database using SQL query
-# Test Data: a@mail.com
+## Test Data: a@mail.com
 
 ### Expected Result
 
