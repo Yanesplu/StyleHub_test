@@ -85,8 +85,7 @@ Tools used during testing:
 - Header / Footer layout
 - Navigation
 - Language switch
-- Console log validation
-
+  
 ## Authentication
 - User registration
 - Login / Logout
@@ -163,10 +162,46 @@ Database validation included:
 Example SQL checks:
 
 ```sql
-SELECT * FROM users;
-SELECT * FROM orders;
-SELECT * FROM products;
+SELECT id, email, created_at
+FROM users
+WHERE email = 'test@test.com';
 ```
+
+```sql
+SELECT id, title, price, stock
+FROM products
+WHERE title ILIKE '%jacket%';
+```
+```sql
+SELECT product_id, quantity
+FROM cart_items
+WHERE user_id = (
+    SELECT id FROM users WHERE email = 'test@test.com'
+);
+```
+```sql
+SELECT id, user_id, total_price, created_at
+FROM orders
+ORDER BY created_at DESC
+LIMIT 5;
+```
+# SQL Injection Safety Check
+
+Example malicious input:
+
+```
+' OR 1=1 --
+```
+
+Test validation:
+
+```sql
+SELECT *
+FROM users
+WHERE email = 'test@test.com'
+AND password = 'invalid_password';
+```
+
 
 ---
 
@@ -187,8 +222,11 @@ The project includes the following QA documentation:
 # Test Results
 
 | Total Test Cases | 97 |
+
 | Passed | 68 |
+
 | Failed | 13 |
+
 | Bugs Found | 16 |
 
 ---
@@ -221,9 +259,3 @@ StyleHub-QA-Testing
 
 
 ---
-
-# Author
-
-Junior QA Engineer passionate about **manual testing, bug investigation, and improving product quality**.
-
-This project demonstrates practical testing skills and real QA workflow.
