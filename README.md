@@ -221,14 +221,14 @@ The project includes the following QA documentation:
 
 # Test Results
 
+| Metric | Result |
+|--------|--------|
 | Total Test Cases | 97 |
-
 | Passed | 68 |
-
 | Failed | 13 |
-
 | Bugs Found | 16 |
 
+**Pass Rate:** 70%
 ---
 
 # Known Issues
